@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Medical Clinic in Lalitpur</title>
+    <title>Best Dental Clinic in Lalitpur | Shine & Smile Dental Clinic</title>
+    <meta name="description" content="Shine & Smile Dental Clinic is a trusted dental clinic in Lalitpur offering dental implants, braces, root canal treatment, teeth whitening, cosmetic dentistry, and family dental care.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -28,59 +29,143 @@
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.9s ease;
+        }
+
+        .fade-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.9s ease;
+        }
+
+        .fade-left.show,
+        .fade-right.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease;
+        }
+
+        .zoom-in.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .float-animation {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%,100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .toast-success {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: white;
+            border-left: 4px solid #22c55e;
+            padding: 16px 20px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            z-index: 9999;
+            transform: translateX(120%);
+            transition: transform 0.4s ease;
+        }
+
+        .toast-success.show {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="font-sans text-gray-900 antialiased bg-white">
 
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300">
         <div class="w-24 h-8 bg-gray-200"></div> <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-            <a href="#" class="hover:text-black">Services</a>
-            <a href="#" class="hover:text-black">About Us</a>
-            <a href="#" class="hover:text-black">Testimonials</a>
-            <a href="#" class="hover:text-black">Contact</a>
+            <a href="#services" class="hover:text-black">Services</a>
+            <a href="#about" class="hover:text-black">About Us</a>
+            <a href="#testimonials" class="hover:text-black">Testimonials</a>
+            <a href="#appointment" class="hover:text-black">Contact</a>
         </div>
         <button class="md:hidden block text-gray-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </nav>
 
-    <section class="w-full min-h-[700px] flex flex-col lg:flex-row">
+    <section class="w-full min-h-[700px] flex flex-col lg:flex-row fade-up show">
 
-        <div class="lg:w-1/2 flex items-center px-8 md:px-16 lg:px-20 py-16">
+        <div class="lg:w-1/2 flex items-center px-8 md:px-16 lg:px-20 py-16 fade-left show">
             <div class="max-w-xl">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
                     <span class="w-2 h-2 bg-green-500 rounded-full"></span>
                     Trusted by Families Across Lalitpur
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    Compassionate Healthcare for Your Family, Backed by Experienced Specialists
+                    Best Dental Clinic in Lalitpur for Advanced & Affordable Dental Care
                 </h1>
 
                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    From routine checkups and preventive care to specialist consultations and advanced treatments, we provide trusted healthcare solutions tailored to every stage of life.
+                    At Shine & Smile Dental Clinic, we provide comprehensive dental care for children, adults, and families. From routine dental checkups and professional teeth cleaning to braces, dental implants, root canal treatment, and cosmetic dentistry, our experienced dental team is committed to helping you achieve a healthy and confident smile.
                 </p>
 
-                <button class="px-8 py-4 bg-black text-white text-sm font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+                <a href="#appointment" class="inline-block px-8 py-4 bg-black text-white text-sm font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
                     Book Appointment
-                </button>
-                <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
+                </a>
+                <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200 float-animation">
                     <div>
-                        <h3 class="text-2xl font-bold">10+</h3>
-                        <p class="text-sm text-gray-500">Years Experience</p>
+                        <h3 class="text-2xl font-bold">3</h3>
+                        <p class="text-sm text-gray-500">Specialist Dentists</p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold">5k+</h3>
-                        <p class="text-sm text-gray-500">Patients Treated</p>
+                        <h3 class="text-2xl font-bold">100%</h3>
+                        <p class="text-sm text-gray-500">Sterilization & Safety Focus</p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold">98%</h3>
-                        <p class="text-sm text-gray-500">Patient Satisfaction</p>
+                        <h3 class="text-2xl font-bold">Modern</h3>
+                        <p class="text-sm text-gray-500">Dental Technology</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="lg:w-1/2 h-[400px] lg:h-auto overflow-hidden bg-black">
+        <div class="lg:w-1/2 h-[400px] lg:h-auto overflow-hidden bg-black fade-right show">
             <video class="w-full h-full object-cover" autoplay muted loop playsinline>
                 <source src="video.mp4" type="video/mp4">
             </video>
@@ -88,17 +173,17 @@
 
     </section>
 
-    <section class="py-24 bg-white border-t border-b border-gray-100">
+    <section id="services" class="py-24 bg-white border-t border-b border-gray-100 fade-up">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
             <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
                 <div class="max-w-3xl">
                     <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-4">Our Services</p>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                        Comprehensive Healthcare Services
+                        Comprehensive Dental Services Under One Roof
                     </h2>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        From preventive care and diagnostics to advanced treatments, our team delivers healthcare solutions designed around your needs.
+                        Whether you need preventive dental care, restorative treatments, or a complete smile transformation, our clinic offers modern dental solutions tailored to your needs. We combine advanced technology, experienced dentists, and patient-focused care to deliver comfortable and effective treatment outcomes.
                     </p>
                 </div>
             </div>
@@ -170,48 +255,48 @@
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section id="testimonials" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Patients Say</h2>
         <p class="text-gray-600 mb-12 text-base max-w-3xl leading-relaxed">
-            Discover why our patients trust us. Their experiences reflect our dedication to quality healthcare, personalized treatment, and exceptional patient care.
+            Thousands of patients trust Shine & Smile Dental Clinic for professional dental care, honest treatment recommendations, and comfortable dental experiences. Read what our patients have to say about their journey toward healthier and brighter smiles.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between zoom-in">
                 <div>
                     <span class="text-5xl font-serif text-blue-200 leading-none">“</span>
-                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">I visited Shine &amp; Smile for a dental checkup and was impressed by how clearly everything was explained. The clinic was clean, the staff were friendly, and the entire experience felt comfortable and professional.</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
                     <div>
-                        <p class="font-bold text-base">Aayush Shah</p>
+                        <p class="font-bold text-base">Priya Shrestha</p>
                         <p class="text-sm text-gray-500">Verified Patient</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between zoom-in">
                 <div>
                     <span class="text-5xl font-serif text-blue-200 leading-none">“</span>
-                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">The dentists took time to answer all my questions and made me feel at ease throughout my treatment. I appreciated the honest recommendations and patient-focused approach.</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
                     <div>
-                        <p class="font-bold text-base">Aayush Shah</p>
+                        <p class="font-bold text-base">Rohit Maharjan</p>
                         <p class="text-sm text-gray-500">Verified Patient</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+            <div class="bg-white rounded-[32px] p-8 border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between zoom-in">
                 <div>
                     <span class="text-5xl font-serif text-blue-200 leading-none">“</span>
-                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-base text-gray-700 mt-3 mb-6 leading-relaxed">My family recently started visiting this clinic and we have had a great experience so far. Booking was simple, the team was welcoming, and the care we received exceeded our expectations.</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
                     <div>
-                        <p class="font-bold text-base">Aayush Shah</p>
+                        <p class="font-bold text-base">Sanjana Karki</p>
                         <p class="text-sm text-gray-500">Verified Patient</p>
                     </div>
                 </div>
@@ -239,7 +324,7 @@
                                 The doctors were incredibly professional and caring. Every step of the treatment was explained clearly and the results exceeded my expectations.
                             </p>
                             <div class="mt-8 pt-6 border-t border-gray-200">
-                                <p class="font-bold">Aayush Shah</p>
+                                <p class="font-bold">Priya Shrestha</p>
                                 <p class="text-sm text-gray-500">Verified Patient</p>
                             </div>
                         </div>
@@ -261,7 +346,7 @@
                                 The clinic environment was welcoming and professional. The team made me feel comfortable throughout my treatment journey.
                             </p>
                             <div class="mt-8 pt-6 border-t border-gray-200">
-                                <p class="font-bold">Sarah Lama</p>
+                                <p class="font-bold">Rohit Maharjan</p>
                                 <p class="text-sm text-gray-500">Verified Patient</p>
                             </div>
                         </div>
@@ -283,7 +368,7 @@
                                 We have trusted this clinic for years. The doctors genuinely care about patients and consistently provide outstanding care.
                             </p>
                             <div class="mt-8 pt-6 border-t border-gray-200">
-                                <p class="font-bold">Ramesh Karki</p>
+                                <p class="font-bold">Sanjana Karki</p>
                                 <p class="text-sm text-gray-500">Verified Patient</p>
                             </div>
                         </div>
@@ -302,37 +387,37 @@
         </div>
     </section>
 
-    <section class="bg-brand-light py-16 md:py-24">
+    <section class="py-24 bg-white border-t border-b border-gray-100 fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-3">Our Professionals</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Specialists</h2>
             <p class="text-gray-700 mb-10 max-w-3xl text-sm md:text-base">
                 Meet our skilled healthcare professionals who are committed to delivering quality medical care, personalized treatment, and trusted healthcare solutions for every patient.
             </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="relative bg-gray-300 rounded-3xl overflow-hidden aspect-[3/4] flex items-end shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openDoctorModal('doctor1')">
-                    <div class="w-full bg-white/80 backdrop-blur-sm p-4 m-4 rounded">
-                        <h4 class="font-bold text-gray-900">Dr. Aayush Shah</h4>
-                        <p class="text-xs text-gray-600">Orthodontics Expert</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative bg-gray-300 rounded-[28px] overflow-hidden aspect-[3/4] flex items-end shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 cursor-pointer zoom-in" onclick="openDoctorModal('doctor1')">
+                    <div class="w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <h4 class="font-bold text-white text-xl mb-1">Dr. Aayush Shah</h4>
+                        <p class="text-sm text-white/80">MDS Orthodontics</p>
                     </div>
                 </div>
-                <div class="relative bg-gray-300 rounded-3xl overflow-hidden aspect-[3/4] flex items-end shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openDoctorModal('doctor2')">
-                    <div class="w-full bg-white/80 backdrop-blur-sm p-4 m-4 rounded">
-                        <h4 class="font-bold text-gray-900">Dr. Aayush Shah</h4>
-                        <p class="text-xs text-gray-600">Medical Expert</p>
+                <div class="group relative bg-gray-300 rounded-[28px] overflow-hidden aspect-[3/4] flex items-end shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 cursor-pointer zoom-in" onclick="openDoctorModal('doctor2')">
+                    <div class="w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <h4 class="font-bold text-white text-xl mb-1">Dr. Aayush Shah</h4>
+                        <p class="text-sm text-white/80">MD Internal Medicine</p>
                     </div>
                 </div>
-                <div class="relative bg-gray-300 rounded-3xl overflow-hidden aspect-[3/4] flex items-end shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openDoctorModal('doctor3')">
-                    <div class="w-full bg-white/80 backdrop-blur-sm p-4 m-4 rounded">
-                        <h4 class="font-bold text-gray-900">Dr. Aayush Shah</h4>
-                        <p class="text-xs text-gray-600">Orthodontics Expert</p>
+                <div class="group relative bg-gray-300 rounded-[28px] overflow-hidden aspect-[3/4] flex items-end shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 cursor-pointer zoom-in" onclick="openDoctorModal('doctor3')">
+                    <div class="w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <h4 class="font-bold text-white text-xl mb-1">Dr. Aayush Shah</h4>
+                        <p class="text-sm text-white/80">Cosmetic Dentistry Specialist</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+    <section id="about" class="max-w-7xl mx-auto px-6 lg:px-8 py-24 fade-up">
 
         <div class="grid lg:grid-cols-2 gap-20 items-center mb-24">
 
@@ -342,38 +427,38 @@
                 </p>
 
                 <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-8">
-                    Committed to Better Healthcare for Every Patient
+                    Trusted Dental Care for Families in Lalitpur
                 </h2>
 
                 <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                    For years, we have helped families access trusted healthcare through experienced doctors, modern facilities, and a patient-first approach.
+                    Shine & Smile Dental Clinic is dedicated to providing high-quality dental care in a comfortable and welcoming environment. We follow modern clinical protocols, maintain strict hygiene standards, and use advanced treatment approaches to ensure safe, reliable, and patient-focused dental care.
                 </p>
 
                 <p class="text-gray-600 leading-relaxed">
-                    Whether it's preventive care, specialist consultation, diagnostics, or long-term treatment, our mission is to provide healthcare that is accessible, reliable, and focused on your wellbeing.
+                    Whether you need a routine checkup or advanced dental treatment, our team is committed to delivering professional care, transparent communication, and treatment quality that meets modern dental standards.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
-
-                <div class="border border-gray-200 p-8">
-                    <h3 class="text-4xl font-bold mb-2">10+</h3>
-                    <p class="text-gray-500">Years of Experience</p>
-                </div>
-
-                <div class="border border-gray-200 p-8">
-                    <h3 class="text-4xl font-bold mb-2">5,000+</h3>
-                    <p class="text-gray-500">Patients Treated</p>
-                </div>
+            <div class="grid grid-cols-2 gap-6 zoom-in">
 
                 <div class="border border-gray-200 p-8">
                     <h3 class="text-4xl font-bold mb-2">3</h3>
-                    <p class="text-gray-500">Specialist Doctors</p>
+                    <p class="text-gray-500">Specialist Dentists</p>
                 </div>
 
                 <div class="border border-gray-200 p-8">
-                    <h3 class="text-4xl font-bold mb-2">98%</h3>
-                    <p class="text-gray-500">Patient Satisfaction</p>
+                    <h3 class="text-4xl font-bold mb-2">100%</h3>
+                    <p class="text-gray-500">Quality & Safety Focused Care</p>
+                </div>
+
+                <div class="border border-gray-200 p-8">
+                    <h3 class="text-4xl font-bold mb-2">Modern</h3>
+                    <p class="text-gray-500">Dental Technology</p>
+                </div>
+
+                <div class="border border-gray-200 p-8">
+                    <h3 class="text-4xl font-bold mb-2">Strict</h3>
+                    <p class="text-gray-500">Hygiene Standards</p>
                 </div>
 
             </div>
@@ -386,31 +471,31 @@
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">
-                        Experienced Specialists
+                        Experienced Dental Professionals
                     </h3>
 
                     <p class="text-gray-600 leading-relaxed">
-                        Our doctors bring years of clinical expertise across multiple healthcare disciplines.
+                        Our dental team combines clinical expertise with a patient-first approach to provide exceptional oral healthcare.
                     </p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">
-                        Modern Medical Facilities
+                        Modern Equipment & Advanced Technology
                     </h3>
 
                     <p class="text-gray-600 leading-relaxed">
-                        Equipped with advanced technology to ensure accurate diagnosis and effective treatment.
+                        We use modern dental equipment and treatment techniques to improve comfort, accuracy, and outcomes.
                     </p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold mb-4">
-                        Patient-Centered Care
+                        Personalized Treatment Plans
                     </h3>
 
                     <p class="text-gray-600 leading-relaxed">
-                        Every treatment plan is tailored to the individual needs and goals of our patients.
+                        Every smile is unique, which is why we create customized treatment plans based on your specific needs and goals.
                     </p>
                 </div>
 
@@ -420,13 +505,13 @@
 
     </section>
 
-    <section id="appointment" class="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+    <section id="appointment" class="max-w-7xl mx-auto px-6 lg:px-8 py-24 fade-up">
 
         <div class="mb-16">
             <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-3">Appointments</p>
-            <h2 class="text-4xl font-bold mb-4">Book Your Visit</h2>
+            <h2 class="text-4xl font-bold mb-4">Book Your Dental Appointment</h2>
             <p class="text-gray-600 max-w-2xl">
-                Schedule an appointment with our healthcare team. We'll contact you to confirm your visit and answer any questions.
+                Looking for a trusted dentist in Lalitpur? Schedule your appointment today for a consultation, routine checkup, braces consultation, dental implant assessment, cosmetic treatment, or emergency dental care.
             </p>
         </div>
 
@@ -436,37 +521,37 @@
 
                 <h3 class="text-2xl font-bold mb-8">Appointment Request</h3>
 
-                <form class="space-y-6">
+                <form id="appointmentForm" class="space-y-6">
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium mb-2">Full Name</label>
-                            <input type="text" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
+                            <input id="fullName" type="text" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium mb-2">Phone Number</label>
-                            <input type="text" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
+                            <input id="phone" type="text" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium mb-2">Email Address</label>
-                            <input type="email" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
+                            <input id="email" type="email" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium mb-2">Preferred Date</label>
-                            <input type="date" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
+                            <input id="appointmentDate" type="date" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black">
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium mb-2">Reason for Visit</label>
-                        <textarea rows="5" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black"></textarea>
+                        <textarea id="message" rows="5" class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black"></textarea>
                     </div>
 
-                    <button type="submit" class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition">
-                        Request Appointment
+                    <button id="submitBtn" type="submit" class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition flex items-center gap-3">
+                        <span id="submitText">Request Appointment</span>
                     </button>
 
                 </form>
@@ -482,8 +567,7 @@
                     <div>
                         <p class="text-sm text-gray-500 mb-2">Address</p>
                         <p class="leading-relaxed">
-                            Bhagwati Mandir, Tikathali-5,<br>
-                            Lalitpur, Nepal 44700
+                            Bhagwati Mandir,Tikathali-5,<br> Lalitpur opposit metropolitan police office, 46700
                         </p>
                     </div>
 
@@ -511,10 +595,94 @@
 
         </div>
 
-        <div class="border border-gray-200 overflow-hidden">
-            <div class="h-[450px] bg-gray-100 flex items-center justify-center">
-                <p class="text-gray-500">Embed Google Map Here</p>
+        <div class="border border-gray-200 overflow-hidden rounded-[28px] bg-white zoom-in">
+
+            <div class="grid lg:grid-cols-2">
+
+                <div class="p-10 lg:p-14 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white">
+
+                    <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-4">
+                        Find Us
+                    </p>
+
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                        Find Shine & Smile Dental Clinic
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-8 max-w-lg">
+                        Shine & Smile Dental Clinic provides modern dental care in a convenient Lalitpur location. Open Google Maps for turn-by-turn navigation and visit our experienced team for trusted dental treatment.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Address</p>
+                            <p class="font-medium">Shine & Smile Dental Clinic Pvt. Ltd.<br>Balkumari–Balkot Road,<br>Mahalaxmi Municipality, Lalitpur</p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Opening Hours</p>
+                            <p class="font-medium">Daily • 9:00 AM – 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Shine+and+Smile+Dental+Clinic+Pvt.+Ltd+Lalitpur+Nepal"
+                        target="_blank"
+                        class="inline-flex w-fit items-center gap-3 bg-black text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+                    >
+                        Get Directions
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="relative h-[400px] lg:h-auto bg-gray-100">
+
+                    <div class="absolute top-6 left-6 z-10 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl max-w-xs border border-gray-100">
+
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <p class="text-xs uppercase tracking-[0.2em] text-gray-500">
+                            Google Maps Location
+                        </p>
+                    </div>
+
+                        <h4 class="text-lg font-bold mb-2">
+                            Shine & Smile Dental Clinic
+                        </h4>
+
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            Balkumari–Balkot Road,<br>
+                            Mahalaxmi Municipality, Lalitpur
+                        </p>
+
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <div>
+                                <p class="text-xs text-gray-500">Rating</p>
+                                <p class="font-semibold">⭐ 5.0</p>
+                            </div>
+
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Shine+and+Smile+Dental+Clinic+Pvt.+Ltd+Lalitpur+Nepal"
+                                target="_blank"
+                                class="text-sm font-semibold text-black"
+                            >
+                                Directions →
+                            </a>
+                        </div>
+
+                    </div>
+                    <iframe
+                        class="w-full h-full"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14134.436279606796!2d85.33410899341108!3d27.6675642964453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19003ca7f7c7%3A0xa8599840dd34ce7d!2sShine%20and%20Smile%20Dental%20Clinic%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1781335882133!5m2!1sen!2snp">
+                    </iframe>
+                </div>
+
             </div>
+
         </div>
 
     </section>
@@ -525,9 +693,9 @@
             <div class="grid md:grid-cols-4 gap-12 pb-12 border-b border-gray-200">
 
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Clinic Name</h3>
+                    <h3 class="text-2xl font-bold mb-4">Shine & Smile Dental Clinic</h3>
                     <p class="text-gray-600 leading-relaxed text-sm">
-                        Providing trusted healthcare, specialist consultations, and patient-centered treatment for families across Lalitpur.
+                        Providing trusted dental care, cosmetic dentistry, dental implants, orthodontics, and family dental services for patients across Lalitpur.
                     </p>
                 </div>
 
@@ -563,7 +731,7 @@
             </div>
 
             <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>© 2026 Clinic Name. All rights reserved.</p>
+                <p>© 2026 Shine & Smile Dental Clinic. All rights reserved.</p>
                 <div class="flex gap-6">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -575,45 +743,46 @@
 
 <!-- Doctor Modal -->
 <div id="doctorModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[110] p-4">
-  <div class="bg-white max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
+  <div class="bg-white rounded-[32px] max-w-6xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
 
-    <button onclick="closeDoctorModal()" class="absolute top-5 right-5 text-3xl z-10">
+    <button onclick="closeDoctorModal()" class="absolute top-6 right-6 z-20 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-xl hover:scale-110 transition">
       ×
     </button>
 
-    <div class="grid lg:grid-cols-2">
+    <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
 
-      <div class="bg-black min-h-[300px] lg:min-h-[500px]">
+      <div class="bg-black min-h-[350px] lg:min-h-[650px] relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none"></div>
         <video id="doctorVideo" class="w-full h-full object-cover" controls>
           <source src="doctor1.mp4" type="video/mp4">
         </video>
       </div>
 
-      <div class="p-8 lg:p-12">
+      <div class="p-8 lg:p-14 bg-gradient-to-b from-white to-gray-50">
         <p class="uppercase tracking-[0.2em] text-xs text-gray-500 mb-3">Doctor Profile</p>
 
-        <h3 id="doctorName" class="text-3xl font-bold mb-2"></h3>
+        <h3 id="doctorName" class="text-4xl font-bold mb-3"></h3>
 
-        <p id="doctorSpeciality" class="text-gray-600 mb-6"></p>
+        <p id="doctorSpeciality" class="text-lg text-gray-600 mb-8"></p>
 
-        <div class="grid grid-cols-2 gap-6 mb-8 border-t border-b border-gray-200 py-6">
+        <div class="grid grid-cols-2 gap-6 mb-10 border-t border-b border-gray-200 py-8">
           <div>
             <p class="text-sm text-gray-500">Experience</p>
-            <p id="doctorExperience" class="font-bold"></p>
+            <p id="doctorExperience" class="font-bold text-2xl"></p>
           </div>
           <div>
             <p class="text-sm text-gray-500">Patients Treated</p>
-            <p id="doctorPatients" class="font-bold"></p>
+            <p id="doctorPatients" class="font-bold text-2xl"></p>
           </div>
         </div>
 
         <div class="mb-6">
-          <h4 class="font-bold mb-2">Education</h4>
+          <h4 class="text-lg font-bold mb-3">Education</h4>
           <p id="doctorEducation" class="text-gray-600 leading-relaxed"></p>
         </div>
 
         <div>
-          <h4 class="font-bold mb-2">About The Doctor</h4>
+          <h4 class="text-lg font-bold mb-3">About The Doctor</h4>
           <p id="doctorDescription" class="text-gray-600 leading-relaxed"></p>
         </div>
 
@@ -624,40 +793,148 @@
   </div>
 </div>
 <!-- Service Modal -->
+    <div id="successToast" class="toast-success">
+      <div class="font-semibold">Appointment Request Sent</div>
+      <div class="text-sm text-gray-500 mt-1">We'll contact you shortly to confirm your appointment.</div>
+    </div>
 </body>
-<div id="serviceModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[100] p-4">
-  <div class="bg-white rounded-3xl max-w-2xl w-full p-8 relative">
-    <button onclick="closeServiceModal()" class="absolute top-5 right-5 text-2xl">×</button>
-    <h3 id="modalTitle" class="text-3xl font-bold mb-3"></h3>
-    <div id="modalPrice" class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-semibold mb-4"></div>
-    <p id="modalDescription" class="text-gray-600 leading-relaxed"></p>
+<div id="serviceModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[100] p-4">
+  <div class="bg-white rounded-[32px] max-w-3xl w-full overflow-hidden shadow-2xl relative animate-in">
+
+    <div class="bg-black text-white p-8">
+      <button onclick="closeServiceModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white text-black font-bold hover:scale-110 transition">×</button>
+      <p class="uppercase tracking-[0.2em] text-xs text-gray-300 mb-3">Dental Service</p>
+      <h3 id="modalTitle" class="text-4xl font-bold mb-4"></h3>
+      <div id="modalPrice" class="inline-block bg-white/10 border border-white/20 px-4 py-2 rounded-full font-semibold"></div>
+    </div>
+
+    <div class="p-8 md:p-10">
+      <p id="modalDescription" class="text-gray-600 leading-relaxed text-lg mb-8"></p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="border border-gray-200 rounded-2xl p-5">
+          <p class="text-sm text-gray-500 mb-2">Treatment Time</p>
+          <p id="modalDuration" class="font-bold text-lg"></p>
+        </div>
+
+        <div class="border border-gray-200 rounded-2xl p-5">
+          <p class="text-sm text-gray-500 mb-2">Recovery</p>
+          <p id="modalRecovery" class="font-bold text-lg"></p>
+        </div>
+
+        <div class="border border-gray-200 rounded-2xl p-5">
+          <p class="text-sm text-gray-500 mb-2">Best For</p>
+          <p id="modalBestFor" class="font-bold text-lg"></p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xl font-bold mb-4">Benefits</h4>
+        <ul id="modalBenefits" class="space-y-3 text-gray-600"></ul>
+      </div>
+    </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init("C6MLdg7Uz3PSIiTZK");
+
+document.getElementById('appointmentForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    const text = document.getElementById('submitText');
+
+    btn.disabled = true;
+    text.textContent = 'Sending Request...';
+    btn.insertAdjacentHTML('beforeend', '<div id="loadingSpinner" class="loading-spinner"></div>');
+
+    try {
+        await emailjs.send(
+            'service_35gdom3',
+            'template_c1ojula',
+            {
+                name: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                date: document.getElementById('appointmentDate').value,
+                message: document.getElementById('message').value
+            }
+        );
+
+        document.getElementById('appointmentForm').reset();
+
+        const toast = document.getElementById('successToast');
+        toast.classList.add('show');
+
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 4000);
+
+        const spinner = document.getElementById('loadingSpinner');
+        if (spinner) spinner.remove();
+        btn.disabled = false;
+        text.textContent = 'Request Appointment';
+
+    } catch (error) {
+        console.error(error);
+        alert('Unable to send request. Please try again or call the clinic directly.');
+        const spinner = document.getElementById('loadingSpinner');
+        if (spinner) spinner.remove();
+        btn.disabled = false;
+        text.textContent = 'Request Appointment';
+    }
+});
+</script>
 <script>
 const serviceData = {
   'Dental Implants': {
     price: 'NPR 25,000 - 120,000',
-    description: 'Dental implants permanently replace missing teeth with artificial roots and crowns. They improve chewing ability, preserve jawbone health, and provide a natural appearance.'
+    description: 'Dental implants permanently replace missing teeth with artificial roots and crowns. They improve chewing ability, preserve jawbone health, and provide a natural appearance.',
+    duration: '1–3 Visits',
+    recovery: 'Few Days',
+    bestFor: 'Missing Teeth',
+    benefits: ['Natural appearance','Long-lasting solution','Improved chewing ability']
   },
   'Braces & Orthodontics': {
     price: 'NPR 45,000 - 180,000',
-    description: 'Orthodontic treatments align teeth and correct bite issues using braces or aligners. This improves oral health, appearance, and long-term dental function.'
+    description: 'Orthodontic treatments align teeth and correct bite issues using braces or aligners. This improves oral health, appearance, and long-term dental function.',
+    duration: '6–24 Months',
+    recovery: 'Minimal',
+    bestFor: 'Crooked Teeth',
+    benefits: ['Better alignment','Improved bite','Enhanced smile aesthetics']
   },
   'Veneers': {
     price: 'NPR 8,000 - 25,000 / tooth',
-    description: 'Veneers are thin custom shells placed over teeth to improve shape, color, and appearance. They are ideal for cosmetic smile transformations.'
+    description: 'Veneers are thin custom shells placed over teeth to improve shape, color, and appearance. They are ideal for cosmetic smile transformations.',
+    duration: '2–3 Visits',
+    recovery: 'None',
+    bestFor: 'Smile Makeovers',
+    benefits: ['Whiter smile','Improved tooth shape','Natural appearance']
   },
   'Root Canal (RCT)': {
     price: 'NPR 5,000 - 15,000',
-    description: 'Root canal treatment removes infection inside the tooth, relieves pain, and saves the natural tooth from extraction.'
+    description: 'Root canal treatment removes infection inside the tooth, relieves pain, and saves the natural tooth from extraction.',
+    duration: '1–2 Visits',
+    recovery: '1–3 Days',
+    bestFor: 'Infected Teeth',
+    benefits: ['Pain relief','Saves natural tooth','Prevents extraction']
   },
   'Teeth Whitening': {
     price: 'NPR 8,000 - 30,000',
-    description: 'Professional whitening removes stains and discoloration to create a brighter, cleaner, and more confident smile.'
+    description: 'Professional whitening removes stains and discoloration to create a brighter, cleaner, and more confident smile.',
+    duration: '1 Session',
+    recovery: 'None',
+    bestFor: 'Stained Teeth',
+    benefits: ['Brighter smile','Quick results','Boosted confidence']
   },
   'General Checkup': {
     price: 'NPR 500 - 2,500',
-    description: 'Routine dental examinations help detect problems early, maintain oral health, and prevent expensive future treatments.'
+    description: 'Routine dental examinations help detect problems early, maintain oral health, and prevent expensive future treatments.',
+    duration: '30–60 Minutes',
+    recovery: 'None',
+    bestFor: 'Preventive Care',
+    benefits: ['Early detection','Better oral health','Lower future treatment costs']
   }
 };
 
@@ -666,7 +943,7 @@ const doctorData = {
     name: 'Dr. Aayush Shah',
     speciality: 'Orthodontics Expert',
     experience: '12+ Years',
-    patients: '5,000+',
+    patients: 'Personalized Care',
     education: 'BDS, MDS Orthodontics – Kathmandu University',
     description: 'Specialized in orthodontic treatment, smile design, braces, and long-term dental correction. Known for patient-focused care and advanced treatment planning.',
     video: 'doctor1.mp4'
@@ -675,7 +952,7 @@ const doctorData = {
     name: 'Dr. Aayush Shah',
     speciality: 'General Medicine Specialist',
     experience: '10+ Years',
-    patients: '8,000+',
+    patients: 'Patient Focused',
     education: 'MBBS, MD Internal Medicine',
     description: 'Experienced in preventive healthcare, chronic disease management, and family medicine with a strong focus on long-term patient wellbeing.',
     video: 'doctor2.mp4'
@@ -684,7 +961,7 @@ const doctorData = {
     name: 'Dr. Aayush Shah',
     speciality: 'Dental & Cosmetic Expert',
     experience: '15+ Years',
-    patients: '10,000+',
+    patients: 'Quality Treatment',
     education: 'BDS, Fellowship in Cosmetic Dentistry',
     description: 'Focused on cosmetic and restorative treatments including veneers, implants, whitening, and smile transformations.',
     video: 'doctor3.mp4'
@@ -716,9 +993,19 @@ function closeDoctorModal() {
 
 function openServiceModal(card) {
   const title = card.querySelector('h3').innerText;
+  const service = serviceData[title];
+
   document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalPrice').innerText = serviceData[title].price;
-  document.getElementById('modalDescription').innerText = serviceData[title].description;
+  document.getElementById('modalPrice').innerText = service.price;
+  document.getElementById('modalDescription').innerText = service.description;
+  document.getElementById('modalDuration').innerText = service.duration;
+  document.getElementById('modalRecovery').innerText = service.recovery;
+  document.getElementById('modalBestFor').innerText = service.bestFor;
+
+  document.getElementById('modalBenefits').innerHTML = service.benefits
+    .map(item => `<li class="flex items-center gap-3"><span class="text-green-600">✓</span>${item}</li>`)
+    .join('');
+
   document.getElementById('serviceModal').classList.remove('hidden');
   document.getElementById('serviceModal').classList.add('flex');
 }
@@ -777,6 +1064,31 @@ if (slider) {
 
   updateSlider();
 }
+// Intersection Observer for fade-up animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up, .fade-left, .fade-right, .zoom-in').forEach(el => {
+  observer.observe(el);
+});
+</script>
+<script>
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+
+  if (window.scrollY > 50) {
+    nav.classList.add('shadow-lg');
+    nav.classList.add('py-3');
+  } else {
+    nav.classList.remove('shadow-lg');
+    nav.classList.remove('py-3');
+  }
+});
 </script>
 <script>
 function toggleFaq(button) {
