@@ -82,6 +82,51 @@
             50% { transform: translateY(-10px); }
         }
 
+        .hero-chair {
+            position: relative;
+            z-index: 2;
+            animation: chairDrift 12s ease-in-out infinite;
+            filter: drop-shadow(0 30px 50px rgba(0,0,0,0.12));
+            transform-origin: center center;
+            will-change: transform;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 9999px;
+            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, rgba(255,255,255,0) 70%);
+            filter: blur(60px);
+            z-index: 1;
+        }
+
+        .hero-shadow {
+            position: absolute;
+            bottom: 110px;
+            width: 360px;
+            height: 40px;
+            background: rgba(0,0,0,0.08);
+            border-radius: 9999px;
+            filter: blur(25px);
+            z-index: 0;
+        }
+
+        @keyframes chairDrift {
+            0%,100% {
+                transform: translate3d(0,0,0);
+            }
+            25% {
+                transform: translate3d(8px,-6px,0);
+            }
+            50% {
+                transform: translate3d(0,-12px,0);
+            }
+            75% {
+                transform: translate3d(-8px,-6px,0);
+            }
+        }
+
         .loading-spinner {
             width: 20px;
             height: 20px;
@@ -242,10 +287,17 @@
         </div>
 
         <div class="lg:w-1/2 h-[500px] lg:h-[700px] overflow-hidden flex items-center justify-center fade-right show relative">
+            <!--
             <video class="w-full h-full object-cover scale-110" autoplay muted loop playsinline>
                 <source src="client1.2.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+            -->
+
+            <img
+                src="chair.png"
+                alt="Modern Dental Chair"
+                class="hero-chair w-[120%] h-[120%] object-contain"
+            >
         </div>
 
     </section>
@@ -312,6 +364,7 @@
             </div>
         </div>
 
+        <div id="moreServices" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
         <div class="grid lg:grid-cols-2 cursor-pointer hover:bg-gray-50 transition">
             <div class="p-8 lg:p-10 border-r border-gray-200">
                 <h3 class="text-2xl font-bold">General Checkup</h3>
@@ -356,7 +409,14 @@
                 <p class="text-gray-600 max-w-xl">Professional plaque and tartar removal, stain cleaning, and preventive oral hygiene care for healthier teeth and gums.</p>
             </div>
         </div>
+        </div>
 
+    </div>
+
+    <div class="text-center mt-8">
+        <button id="showMoreServicesBtn" class="px-8 py-3 bg-black text-white rounded-xl font-medium hover:scale-105 transition-all duration-300">
+            Show More Services
+        </button>
     </div>
 
         </div>
@@ -1170,6 +1230,26 @@ if (mobileBtn && mobileMenu) {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
     });
+  });
+}
+</script>
+<script>
+const showMoreServicesBtn = document.getElementById('showMoreServicesBtn');
+const moreServices = document.getElementById('moreServices');
+
+if (showMoreServicesBtn && moreServices) {
+  showMoreServicesBtn.addEventListener('click', () => {
+    const expanded = moreServices.classList.contains('open');
+
+    if (expanded) {
+      moreServices.style.maxHeight = '0px';
+      moreServices.classList.remove('open');
+      showMoreServicesBtn.textContent = 'Show More Services';
+    } else {
+      moreServices.style.maxHeight = moreServices.scrollHeight + 'px';
+      moreServices.classList.add('open');
+      showMoreServicesBtn.textContent = 'Show Less Services';
+    }
   });
 }
 </script>
