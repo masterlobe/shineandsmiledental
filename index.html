@@ -274,11 +274,6 @@
             }
         }
 
-        @media (max-width: 768px) {
-            #doctorImage {
-                object-position: center 10%;
-            }
-        }
     </style>
 </head>
 
@@ -1206,6 +1201,7 @@
             doctor2: {
                 name: 'Dr. Pravin Jaiswal',
                 image: 'pravin.jpeg',
+                imagePosition: 'center 5%',
                 speciality: 'Oral & Maxillofacial Surgeon',
                 experience: 'BDS, MDS',
                 years: '12+ Years',
@@ -1217,6 +1213,7 @@
             doctor3: {
                 name: 'Dr. Aastha Pathak',
                 image: 'aastha.jpeg',
+                imagePosition: 'center 10%',
                 speciality: 'Periodontist',
                 experience: 'BDS, MDS',
                 years: '10+ Years',
@@ -1250,6 +1247,7 @@
             doctor6: {
                 name: 'DH. Pushpa Sunuwar',
                 image: 'pushpa.jpeg',
+                imagePosition: 'center 10%',
                 speciality: 'Dental Hygienist',
                 experience: 'CDS',
                 years: '3+ Years',
@@ -1266,8 +1264,10 @@
 
             document.getElementById('doctorName').innerText = doctor.name;
             document.getElementById('doctorSpeciality').innerText = doctor.speciality;
-            document.getElementById('doctorImage').src = doctor.image;
-            document.getElementById('doctorImage').alt = doctor.name;
+            const doctorImage = document.getElementById('doctorImage');
+            doctorImage.src = doctor.image;
+            doctorImage.alt = doctor.name;
+            doctorImage.style.objectPosition = doctor.imagePosition || 'center center';
             document.getElementById('doctorExperience').innerText = doctor.experience;
             document.getElementById('doctorYears').innerText = doctor.years;
             document.getElementById('doctorPatients').innerText = doctor.patients;
